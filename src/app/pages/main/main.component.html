@@ -1,0 +1,18 @@
+<div class="container my-3">
+  <h1>BreadKingsBadApi</h1>
+  <hr>
+  <div class="mb-3">
+
+
+      <input type="text"
+        class="form-control" name="" id="" aria-describedby="helpId" (input)="filter($event)" placeholder="Search">
+
+  </div>
+
+    <div class="row">
+<div *ngFor="let character of characters" class="col-xl-4 col-sm-6 col-xs-12">
+  <app-card [character]="character"></app-card>
+</div>
+    </div>
+
+</div>

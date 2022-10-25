@@ -1,0 +1,18 @@
+<div class="card text-white bg-primary my-3">
+  <img class="card-img-top" src="{{character.img}}" alt="{{character.name}}">
+  <div class="card-body">
+    <span class="btn btn-sm float-end" [ngClass]="{
+      'btn-success': character.status.toLowerCase().includes('alive'),
+    'btn-danger': !character.status.toLowerCase().includes('alive')}">
+{{character.status}}
+    </span>
+    <h4 class="card-title">{{character.name}}</h4>
+    <p class="card-text">{{character.nickname}}</p>
+    <hr>
+    <p>Occcupation</p>
+    <div *ngFor="let o of character.occupation" class="">
+<p>&bull;{{o}}</p>
+
+    </div>
+  </div>
+</div>
